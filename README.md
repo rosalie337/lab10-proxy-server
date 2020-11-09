@@ -1,6 +1,6 @@
 # Lab 10: Proxy servers and contracts
 
-[City Explorer Trollo Board](https://trello.com/b/z7gfAN0M/city-explorer-api)
+[City Explorer Trello Board](https://trello.com/b/z7gfAN0M/city-explorer-api)
 
 ## Overview
 
@@ -8,7 +8,7 @@ In today's lab, you will be building a stand-alone back end which will interact 
 
 You will have access to view the code base for the client, but will not be able to modify it in any way.
 
-That means you _must fulfil the contract_ that the front end follows. Your back end must respond with data in the correct shape, and must listen for requests at the correct endpoints with the right input.
+That means you _must fulfil the contract_ that thrue front end follows. Your back end must respond with data in the correct shape, and must listen for requests at the correct endpoints with the right input.
 
 You will tell the front end the address of your back end. When you follow the trellow board correctly, the front end should be totally functional. 
 
