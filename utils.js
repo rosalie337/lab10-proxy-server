@@ -38,9 +38,10 @@ function mungedHiking(trails) {
     };
     
   });
+  console.log(hikingArray);
   return hikingArray.slice(0, 1);
+  
 }
-
 module.exports = {
   mungedWeather, mungedLocation, mungedHiking
 };
