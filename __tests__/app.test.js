@@ -55,17 +55,17 @@ describe('app weather', () => {
 
   test ('mungedHiking', () => {
   
-    const expectation = {
+    const expectation = [{
       'name': 'Enchantments Traverse',
       'location': 'Leavenworth, Washington',
-      'length': '19.1',
-      'votes': '77',
-      'stars': '4.9',
+      'length': 19.1,
+      'votes': 77,
+      'stars': 4.9,
       'summary': 'An extraordinary hike that takes you through all of the beauty that the Enchantments have to offer!',
       'url': 'https://www.hikingproject.com/trail/7005246/enchantments-traverse',
       'conditions': 'Dry',
       'conditionDate': '2020-10-13 14:06:06', 
-    };
+    }];
 
     const actual = mungedHiking(hikingData);
       
