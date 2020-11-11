@@ -1,5 +1,6 @@
-const { mungedWeather, mungedLocation, mungedHiking } = require('../utils.js');
+const { mungedWeather, mungedLocation, mungedHiking, mungedYelp } = require('../utils.js');
 const weatherData = require('../data/weather.json');
+const yelpData = require('../data/yelp.json');
 const locationData = require('../data/location.json');
 // const yelpData = require('../data/yelp.js');
 const hikingData = require('../data/hiking');
@@ -41,10 +42,23 @@ describe('app weather', () => {
       
     expect(actual).toEqual(expectation);
   });
+  test ('mungedYelp', () => {
+  
+    const expectation = [{ 
+      'image_url': 'https://s3-media4.fl.yelpcdn.com/bphoto/qHrzQy5ih2Sjhn7MdsCASw/o.jpg', 
+      'name': 'Voodoo Doughnut - Old Town', 
+      'price': '$',
+      'rating': 3.5,
+      'url': 'https://www.yelp.com/biz/voodoo-doughnut-old-town-portland-2?adjust_creative=hfNg_5sfkuGir-cePTGo8A&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=hfNg_5sfkuGir-cePTGo8A'
+    }];
+
+    const actual = mungedYelp(yelpData);
+      
+    expect(actual).toEqual(expectation);
+  });
 
   test ('mungedWeather', () => {
   
-    // const displayWeather = data.map((item) => item.weather.description);
     const expectation = { 'formatted_query': 'Portland, Multnomah County, Oregon, USA',
       'latitude': '45.5202471', 'longitude': '-122.6741949' };
 

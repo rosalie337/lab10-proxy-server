@@ -21,11 +21,28 @@ function mungedLocation(location) {
   };
 }
 
-function mungedHiking(trails) {
-  let hikingArray = trails.trails.map((trail) => {
+function mungedYelp(yelp) {
+
+  let yelpArray = yelp.businesses.map(item => {
 
     return {
-      
+        
+      name: item.name,
+      image_url: item.image_url,
+      price: item.price,
+      rating: item.rating,
+      url: item.url
+    }; 
+
+  });
+  return yelpArray.slice(0, 1);
+}
+
+function mungedHiking(trails) {
+  let hikingArray = trails.trails.map((trail) => {
+  
+    return {
+        
       name: trail.name,
       location: trail.location,
       length: trail.length,
@@ -36,12 +53,12 @@ function mungedHiking(trails) {
       conditions: trail.conditionDetails,
       conditionDate: trail.conditionDate
     };
-    
+      
   });
-  console.log(hikingArray);
-  return hikingArray.slice(0, 1);
+  
+  return hikingArray.slice(0, 1); // rendering 10 hikes
   
 }
 module.exports = {
-  mungedWeather, mungedLocation, mungedHiking
+  mungedWeather, mungedLocation, mungedHiking, mungedYelp
 };
