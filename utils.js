@@ -35,7 +35,7 @@ function mungedYelp(yelp) {
     }; 
 
   });
-  return yelpArray.slice(0, 1);
+  return yelpArray.slice(0, 19);
 }
 
 function mungedHiking(trails) {
